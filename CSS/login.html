@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <style>
+      .login-container {
+        width: 20%;
+        border: 2px solid white;
+        padding: 2%;
+        margin: auto;
+        margin-top: 5%;
+        border-radius: 10px;
+        background-color: white;
+      }
+      .login-container h2 {
+        /* margin-top: 50px; */
+        text-align: center;
+      }
+      .input-feild {
+        margin-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid black;
+        padding-bottom: 2px;
+      }
+      .input-feild input {
+        border: none;
+        outline: none;
+      }
+      .password {
+        margin-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid black;
+        padding-bottom: 2px;
+      }
+      .password input {
+        border: none;
+        outline: none;
+      }
+      .form-field {
+        margin-bottom: 15px;
+      }
+      .forget {
+        text-align: right;
+      }
+      .forget a{
+        color: gray;
+      }
+      a{
+        text-decoration: none;
+      }
+      button {
+        color: white;
+        margin-top: 25px;
+        border-radius: 650px;
+        width: 100%;
+        margin: auto;
+        border: 1px solid black;
+        padding-top: 10px;
+        border: none;
+        padding-bottom: 10px;
+        background: linear-gradient(to left, #5BC2E4, #F12AFF);
+      }
+      body {
+        background: linear-gradient(to left, rgb(212, 192, 15), rgb(69, 68, 68));
+      }
+      .icon {
+        text-align: center;
+        /* padding-top: 2px; */
+      }
+      .signup {
+        padding-top: 50px;
+      }
+      .signup a{
+        color: gray;
+      }
+      .social-media{
+        color: white;
+      }
+      .social-media i{
+        /* background-color: */
+        border-radius: 50%;
+        padding: 10px;
+      }
+      .fa-facebook{
+        background-color:#3A5B96 ;
+      }
+      .fa-x-twitter{
+        background-color: black;
+      }
+      .fa-google{
+        background-color: #ED4330;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+      <div class="form-field">
+        <label for="">userlogin</label>
+        <div class="input-feild">
+          <i class="fa-regular fa-user"></i>
+          <input type="text" placeholder="Type your username" />
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="">password</label>
+        <div class="password">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" placeholder="Type your password" />
+        </div>
+      </div>
+
+      <div class="form-field forget">
+        <a href="">forget password?</a>
+      </div>
+
+      <div class="form-field button">
+        <button>Login</button>
+      </div>
+      <div class="icon">
+        <p>or signup using</p>
+        <div class="social-media">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-google"></i>
+        </div>
+        <div class="signup">
+          <p>or signup using</p>
+          <a href="">signup</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+p {
+  background-color: aqua;
+  color: rgb(132, 4, 4);
+}
+h1 {
+  border: 2px dashed rgba(48, 10, 238, 0.915);
+}
