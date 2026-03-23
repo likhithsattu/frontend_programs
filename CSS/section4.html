@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section4</title>
+    <style>
+        body{
+            background-color: whitesmoke;
+            font-family: sans-serif;
+        }
+        .parent-container{
+            display: flex;
+            gap: 15px;
+            margin-left:100px ;
+        }
+        .icons{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            gap: 10px;
+            width: 190%;
+            transition: transform 0.2s;
+        }
+
+        .icon-row{
+            display: grid;
+            /* flex-wrap: wrap; */
+            grid-template-columns:150px 150px 150px 150px 150px 150px ;
+            gap: 25px;
+        }
+
+        .icons a:hover{
+            transform: scale(1.05);
+        }
+
+        .icons a{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            text-align: center;
+            color: black;
+            font-size: 14px;
+            width: 140px;
+            padding: 5px;
+            gap: 30px;
+            border: 2px solid whitesmoke;
+            border-radius: 10px;
+        }
+        .icons .img1{
+            width: 60px;
+            margin-bottom: 6px;
+        }
+
+        .upi img{
+            width: 80%;
+        }
+        
+
+        .slim{
+        display: flex;
+        justify-content: center; 
+        gap: 20px;
+        margin-top: 20px;
+        padding: 0 100px;      
+        }
+
+        .slim img{
+        width: 100%;
+        display: block;           
+        margin-top: 5px;               
+        }
+
+        .slim a{
+        flex: 1;
+        transition: transform 0.2s;  
+        }
+
+        .slim a:hover{
+            transform: scale(1.05);
+        }
+
+    
+        .images-block{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 0 100px;  
+            gap: 10px;
+        }
+
+
+        .images-block img{
+        width: 100%;
+        display: block;           
+        margin-top: 5px;  
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="parent-container">
+
+            
+            <div class="icons">
+                <h3>Recharges & Bill Payments</h3>
+                <div class="icon-row">
+                    <a href="https://paytm.com/recharge"><img class="img1" src="https://assetscdn1.paytm.com/images/catalog/view_item/3179318/36886801089433092.png" alt="">Mobile Recharge</a>
+                    <a href="https://paytm.com/dth-recharge"><img class="img1" src="https://assetscdn1.paytm.com/images/catalog/view_item/3179317/36886820392724710.png" alt="">DTH Recharge</a>
+                    <a href="https://paytm.com/fastag-recharge"><img class="img1" src="https://assetscdn1.paytm.com/images/catalog/view_item/3179320/36886837922197985.png" alt="">Fastag Recharge</a>
+                    <a href="https://paytm.com/electricity-bill-payment"><img class="img1" src="https://assetscdn1.paytm.com/images/catalog/view_item/3179321/4291158023212300.png" alt="">Electricity Bill</a>
+                    <a href="https://paytm.com/loan-emi-payment"><img class="img1" src="https://assetscdn1.paytm.com/images/catalog/view_item/3179322/4291177446001440.png" alt="">Loan EMI payment</a>
+                    <a href="https://paytm.com/loan-emi-payment"><img class="img1" src="https://assetscdn1.paytm.com/images/catalog/view_item/3179319/36886901834673050.png" alt="">View all Products</a>
+                </div>
+            </div>
+
+
+        <div class="upi">
+            <a href="https://paytm.com/download-paytm-app"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/3179325/4291045606114157.png" alt=""></a>
+        </div>
+    
+    </div>
+
+    <div class="slim">
+            <a href="https://paytm.com/recharge-bill-payment"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/3179326/36888278327861604.png" alt=""></a>
+            <a href="https://paytm.com/recharge-bill-payment"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/3179327/36887667031536363.png" alt=""></a>
+        </div>
+
+    <div class="images-block">
+        <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/2988609/4291841603322316.png" alt=""></a>
+        <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/3022660/4291820506003774.png" alt=""></a>
+        <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/3134667/36887499051496070.png" alt=""></a>
+
+    </div>    
+</body>
+</html>
