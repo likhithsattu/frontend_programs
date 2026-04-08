@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <script>
+    // while loop
+
+    console.log("1,2,3,4,5")
+
+    //while syntax
+
+    let a=1; // initialization
+    while(a<=7){ // condition
+        console.log(a); // body
+        a++; // iteration / increment
+
+    }
+
+//=================================================================================================================================================================================================================================
+
+
+    // do while loop
+    let b=8; // initialization
+    do{
+        console.log(b); // output : 8
+        b++; // output : 8++ = 9, 9++ = 10, 10++ = 11, 11++ = 12, 12++ = 13, 13++ = 14
+    }
+    while(b<=14)
+
+//=================================================================================================================================================================================================================================
+
+    // for loop
+
+    for(let c=15; c<=21; c++){ // initialization, condition, iteration
+        console.log(c); // output : 15,16,17,18,19,20,21
+    }
+
+//=================================================================================================================================================================================================================================
+
+    // while loop vs for loop
+    // The main difference between while loop and for loop is that in while loop, the condition is checked before the execution of the loop body, whereas in for loop, the initialization, condition, and iteration are all specified in the loop header. This means that in while loop, the initialization and iteration must be handled manually within the loop body, whereas in for loop, these are handled automatically.
+
+    let password = "";
+    while(password!=="1234"){
+    password = prompt("Enter your password");
+    }
+    console.log("Login successful")
+
+//=================================================================================================================================================================================================================================
+
+    // while loop vs do while loop
+    // The main difference between while loop and do while loop is that in while loop, the condition is checked before the execution of the loop body, whereas in do while loop, the condition is checked after the execution of the loop body. This means that in while loop, if the condition is false at the beginning, the loop body will not be executed at all, whereas in do while loop, the loop body will be executed at least once even if the condition is false.
+
+
+    </script>    
+    
+</body>
+</html>

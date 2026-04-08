@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Design</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            padding: 10px 40px;
+        }
+        .navbar-nav {
+            align-items: center;
+            gap: 20px;
+            margin-left: 40px;
+        }
+        .nav-link {
+            white-space: nowrap;
+        }
+        .signin-btn {
+            padding: 6px 15px;
+            border-radius: 50px;
+            background-color: #002970;
+            color: white;
+            border: none;
+            transition: 0.3s;
+        }
+        .signin-btn:hover {
+            background-color: white;
+            color: #002970;
+            border: 1px solid #002970;
+        }
+        .right-section {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://pwebassets.paytm.com/commonwebassets/paytmweb/header/images/logo_new.svg" alt="logo" height="15">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Recharge & Bills</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Mobile Recharge</a></li>
+                        <li><a class="dropdown-item" href="#">Electricity Bill</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Ticket Booking</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Flights</a></li>
+                        <li><a class="dropdown-item" href="#">Trains</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Payments & Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Wallet</a></li>
+                        <li><a class="dropdown-item" href="#">UPI</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Paytm for Business</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Wallet</a></li>
+                        <li><a class="dropdown-item" href="#">UPI</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Company</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">About</a></li>
+                        <li><a class="dropdown-item" href="#">Careers</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="right-section">
+                <a class="nav-link" href="#">
+                    <i class="fa-solid fa-download"></i> Download App
+                </a>
+                <button class="signin-btn">
+                    <i class="fa-solid fa-user"></i> Sign In
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

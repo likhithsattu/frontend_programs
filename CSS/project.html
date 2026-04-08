@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IndiaMart Buyer Dashboard</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f6f7;
+}
+
+/* HEADER */
+.header {
+  background: #2c2f8f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+}
+
+.logo img {
+  height: 30px;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-icons img {
+  width: 20px;
+  filter: brightness(0) invert(1);
+}
+
+/* MAIN LAYOUT */
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* SIDEBAR (NOW STARTS FROM TOP) */
+.sidebar {
+  width: 220px;
+  background: white;
+  padding: 15px;
+  height: 100vh;
+}
+
+.sidebar h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.sidebar .active {
+  color: #2c2f8f;
+  font-weight: bold;
+}
+
+/* RIGHT CONTENT */
+.content {
+  flex: 1;
+  padding: 10px 20px;
+}
+
+/* COMPACT SEARCH BAR */
+.search-bar {
+  background: white;
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.search-bar select,
+.search-bar input {
+  padding: 6px;
+  font-size: 13px;
+}
+
+.search-bar input {
+  flex: 1;
+}
+
+.search-btn {
+  background: #00a699;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.rfq-btn {
+  background: #4a3df0;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+/* ROW */
+.top-row {
+  display: flex;
+  gap: 20px;
+}
+
+/* CATEGORIES */
+.categories {
+  flex: 3;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.categories h2 {
+  font-size: 18px;
+}
+
+.cards {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.item {
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.item p {
+  margin: 8px 0;
+  text-align: center;
+  font-size: 13px;
+  flex-grow: 1;
+}
+
+.item button {
+  background: #00a699;
+  color: white;
+  border: none;
+  padding: 6px;
+  width: 100%;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+/* SIGNIN */
+.signin-box {
+  flex: 1;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.signin-box h3 {
+  font-size: 16px;
+}
+
+.otp-btn {
+  background: #00a699;
+  color: white;
+  border: none;
+  padding: 8px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.small {
+  font-size: 12px;
+  color: gray;
+  margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/IndiaMART_logo.svg">
+  </div>
+
+  <div class="nav-icons">
+    <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png">
+    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png">
+    <img src="https://cdn-icons-png.flaticon.com/512/545/545705.png">
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h3>Buyer</h3>
+    <ul>
+      <li class="active">Dashboard</li>
+      <li>My Profile</li>
+      <li>Messages</li>
+      <li>Know Your Seller</li>
+      <li>Payment Protection</li>
+      <li>Loans</li>
+      <li>Ship With IM</li>
+      <li>Credit Score</li>
+    </ul>
+  </aside>
+
+  <!-- RIGHT CONTENT -->
+  <div class="content">
+
+    <!-- SMALL SEARCH BAR -->
+    <div class="search-bar">
+      <select>
+        <option>Vijayawada</option>
+      </select>
+      <input type="text" placeholder="Enter product / service">
+      <button class="search-btn">Search</button>
+      <button class="rfq-btn">Post RFQ</button>
+    </div>
+
+    <!-- ROW -->
+    <div class="top-row">
+
+      <section class="categories">
+        <h2>Categories You May Like</h2>
+
+        <div class="cards">
+          <div class="item">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2023/3/generic-medicines.jpg">
+            <p>Generic Medicines</p>
+            <button>Get Quotes</button>
+          </div>
+
+          <div class="item">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2022/9/surgical-gloves.jpg">
+            <p>Surgical Gloves</p>
+            <button>Get Quotes</button>
+          </div>
+
+          <div class="item">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2023/1/basmati-rice.jpg">
+            <p>Basmati Rice</p>
+            <button>Get Quotes</button>
+          </div>
+
+          <div class="item">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2021/6/flex-printing-machine.jpg">
+            <p>Flex Printing Machine</p>
+            <button>Get Quotes</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SIGN IN -->
+      <section class="signin-box">
+        <h3>Complete Sign-In</h3>
+        <p>Access your profile, messages, past orders and more</p>
+        <button class="otp-btn">Continue with OTP</button>
+        <p class="small">Sign in as different user</p>
+      </section>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

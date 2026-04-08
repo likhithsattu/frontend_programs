@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       "use strict"
+        // LET is a keyword used to declare a variable. It is block scoped, which means that it is only accessible within the block in which it is declared. It can be reassigned a value, but it cannot be redeclared within the same scope.
+        // let Viswa=20; //initializing a variable (declaring and assigning a value to a variable)
+        let viswa; //decalring a variable
+        viswa=20; //assigning a value to a variable
+        console.log(viswa)
+
+        // let viswa; //redeclare - NOT ALLOWED
+        // we cannot redeclare a variable using let keyword. It will throw an error. We can only declare a variable once using let keyword. We can reassign a value to the variable, but we cannot redeclare it.
+
+        viswa="nadh" //reassigning a value to a variable - ALLOWED
+        console.log(viswa)
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        
+        // CONST is a keyword used to declare a variable. It is block scoped, which means that it is only accessible within the block in which it is declared. It cannot be reassigned a value, and it cannot be redeclared within the same scope.
+
+        // const tamma;
+        // we cannot declare a variable using const keyword without initializing it. It will throw an error. We have to initialize a variable at the time of declaration when we use const keyword.
+
+        const tamma=80;
+        // console.log(tamma)
+
+        // const tamma=30; //redeclare - NOT ALLOWED
+        // we cannot redeclare a variable using const keyword. It will throw an error. We can only declare a variable once using const keyword. We cannot reassign a value to the variable, and we cannot redeclare it.
+
+        // tamma=30; //reassign - NOT ALLOWED
+        // we cannot reassign a value to a variable declared with const keyword. It will throw an error. We can only declare a variable once using const keyword. We cannot reassign a value to the variable, and we cannot redeclare it.
+        console.log(tamma) 
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+        // var viswanadh;
+        // viswanadh="tammana"
+
+        var viswanadh="tammana" 
+        // var is a keyword used to declare a variable. It is function scoped, which means that it is only accessible within the function in which it is declared. It can be reassigned a value, and it can be redeclared within the same scope.
+        console.log(viswanadh)
+
+        var viswanadh="nadh" //redeclare - ALLOWED
+        console.log(viswanadh)
+
+        viswanadh="name"
+        console.log(viswanadh) //reassign - ALLOWED
+    </script>
+    
+</body>
+</html>

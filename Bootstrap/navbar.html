@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .viswa img {
+            width: 500px !important;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img width="50" height="50" src="data:image/jpeg;base64,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" alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Branch
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Vijayawada</a></li>
+            <li><a class="dropdown-item" href="#">Bangalore</a></li>
+            <!-- <li><hr class="dropdown-divider"></li> -->
+            <li><a class="dropdown-item" href="#">vizag</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Register</a>
+        </li>
+      </ul>
+      <!-- <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+    </div>
+  </div>
+</nav>
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button> -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for @fat</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button> -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login Here</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Email:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <!-- <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div> -->
+           <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Password:</label>
+            <input type="password" class="form-control" id="recipient-name">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <div class="row row-cols-1 row-cols-md-3 g-4"> 
+  <div class="col">
+    <div class="card h-100">
+      <img src="./shin.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="./shin.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="./shin.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner ">
+    <div class="carousel-item active viswa">
+      <img  src="./shin.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img  src="./shin.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img  src="./shin.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
+</body>
+</html>
