@@ -6,15 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="first()">submit</button>
-    <input type="text" placeholder="enter your name">
+    <!-- <button onclick="first()">submit</button> -->
+    <input type="text" placeholder="enter your name" id="satheesh">
+    <input type="email" placeholder="enter email" id="likhith">
+    <button onclick="second()">login</button>
     <script>
         function first(){
             console.log("hello likhith, how are u")
         }
 
         function second(){
-            
+           let d= document.getElementById("satheesh").value
+           console.log(d)
+           let e=document.getElementById("likhith").value
+           console.log(e)
         }
         
     </script>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let studentList=[
+            {name:"nikesh",age:20,branch:"python"},
+            {name:"tapsya",age:21,branch:"python"},
+            {name:"janaeswar",age:28,branch:"dsa"},
+            {name:"vasantha",age:16,branch:"python"},
+    ]
+    // studentList.map(student => console.log(student.name));
+    let b=studentList.map((i)=>{
+        return i.name
+    })
+    let c=studentList.map((k)=>{
+        return k.age+5
+    })
+    console.log(c)
+ 
+    let p=studentList.filter((j)=>{
+        if(j.age>20){
+    return(j.age)
+    }
+    })
+    // .map(v=>.age)
+    console.log(p)
+    let j=p.map((jyothi)=>{
+        return jyothi.age
+    })
+    console.log(j)
+
+    
+    let o=studentList.find((j)=>{
+        if(j.age>20){
+    return(j.age)
+    }
+    })
+    console.log(o)
+
+    let w=studentList.some((j)=>{
+        if(j.age>20){
+    return(j.age)
+    }
+    })
+    console.log(w)
+
+    let f=studentList.every((j)=>{
+        if(j.age>20){
+    return(j.age)
+    }
+    })
+    console.log(f)
+    </script>
+</body>
+</html>

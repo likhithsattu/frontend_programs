@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter your text" id="input_field">
+    <button onclick="addStudent()">Add student</button>
+
+    <ul id="studentList">
+        <li></li>
+
+    </ul>
+
+    <script>
+        onload=function(){
+            loadstudents()
+        }
+
+        function addStudent(){
+
+            let studentFeild=document.getElementById("input_field")
+            if(studentFeild.value==""){
+                alert("Enter the name")
+                return false
+
+            }
+
+            let existingStudents=getStudentsFromStorage()
+            // console.log(existingStudents)
+ 
+            existingStudents.push(studentFeild.value)
+            console.log(existingStudents);
+
+            localStorage.setItem("students",JSON.stringify(existingStudents));
+
+            loadstudents()
+
+        }
+
+          function getStudentsFromStorage(){
+                let students = localStorage.getItem("students");
+                return students? JSON.parse(students):[]
+            }
+
+            function loadstudents(){
+                studentsList=document.getElementById("studentList")
+                console.log(studentsList);
+                studentsList.innerHTML=""
+                let existingStudents=getStudentsFromStorage();
+                existingStudents.forEach(function(i,index){
+                    console.log(i,index);
+                    let li=document.createElement("li");
+                    // li.innerHTML=i
+                    li.innerHTML=`${i} <button onClick="deletestudents(${index})">delete</button>`
+                    studentsList.appendChild(li);
+                }
+            )
+        }
+
+        function deletestudents(id){
+            let existingStudents=getStudentsFromStorage();
+            console.log(existingStudents);
+            existingStudents.splice(id,1);
+            localStorage.setItem("students",JSON.stringify(existingStudents))
+            loadstudents()
+        }
+    </script>
+</body>
+</html>

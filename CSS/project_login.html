@@ -79,20 +79,22 @@ body {
 }
 
 .submit-btn {
+  display: block;        /* IMPORTANT */
   width: 100%;
   padding: 12px;
-  /* text-decoration: none; */
   background: #159a8c;
   color: white;
   border: none;
   border-radius: 4px;
   font-size: 18px;
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;  /* prevents extra right space */
 }
 
 .submit-btn:hover {
   background: #12877a;
-  text-decoration: none;
 }
 </style>
 
@@ -102,7 +104,7 @@ body {
 <div class="login-box">
   <div class="login-header">
     <span>Sign In</span>
-    <span class="close-btn">&times;</span>
+    <!-- <span class="close-btn">&times;</span> -->
   </div>
 
   <div class="login-body">
@@ -115,10 +117,10 @@ body {
       </div>
       <input type="text" placeholder="Enter Your Mobile Number">
     </div>
-
-    <button class="submit-btn"><a href="http://127.0.0.1:5500/CSS/project_otp.html">Submit</a></button>
+<a href="./project_otp.html" class="submit-btn">Submit</a>
   </div>
 </div>
 
 </body>
+
 </html>

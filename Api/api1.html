@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <style>
+        #doctors{
+            display:flex;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap: 15px;
+        }
+        .card{
+            border: 2px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="doctors">
+
+    </div>
+    <script>
+        onload=function(){
+            getDoctors();
+        }
+        function getDoctors(){
+            let b=fetch("https://doc-back.onrender.com/doctors",{
+                method:"GET"
+            })
+            .then((result)=>{
+                console.log(result)
+                return result.json();
+            })
+            .then((data)=>{
+                console.log(data);
+                showDoctors(data)
+
+            })
+        }
+        function showDoctors(data){
+            data.map((i)=>{
+                console.log(i.name,i.salary);
+                document.getElementById("doctors").innerHTML+=
+                `
+                <div class=card>
+                    <p>${i.name}</p>
+                    <p>${i.salary}</p>
+                    <p>${i.gender}</p>
+                    <p>${i.age}</p>
+                    <p>${i.specilization}</p>
+                    <button onclick="deleteDoctors(${i.id})">Delete</button>
+                    <button onclick="updateDoctors('${i.id}','${i.name}','${i.age}','${i.gender},'${i.specilization}')">Update</button>
+                    </div>
+                
+                `
+            })
+        
+        }
+        function deleteDoctors(id){
+            axios.delete(`https://doc-back.onrender.com/doctors/${id}`)
+            .then((res)=>{
+                console.log(res);
+                alert("delete successful");
+            })
+        
+        function updateDoctors(id,oldname,oldsalary,oldage,oldgender,oldspecilization){
+            let newname= prompt("enter new name",oldname)
+            let newsalary= prompt("enter new salary",oldsalary)
+            let newage= prompt("enter new age",oldage)
+            let newgender= prompt("enter new gender",oldgender)
+            let newspecilization= prompt("enter new specilization",oldspecilization)
+
+            axios.put(`https://doc-back.onrender.com/doctors/${id}`,{
+                name:newname,
+                salary:newsalary,
+                age:newage,
+                gender : newgender,
+                specilization:newspecilization
+            })
+            .then((result)=>{
+                alert("updates successful;ly");
+                getDoctors()
+            })
+            .catch((error)=>{
+                console.log(error)
+            })
+        }
+        }
+    </script>
+</body>
+</html>
