@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OTP Page</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+.otp-box {
+  width: 500px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.otp-header {
+  background: #2c2f8f;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.otp-body {
+  padding: 30px;
+  text-align: center;
+}
+
+.otp-body p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.otp-title {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.otp-inputs input {
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+.resend {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.resend a {
+  color: #2c2f8f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ccc;
+}
+
+.divider span {
+  margin: 0 10px;
+  color: #555;
+}
+
+.alt-login {
+  font-size: 14px;
+  color: #555;
+  text-decoration:none;
+  cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="otp-box">
+
+  <div class="otp-header">
+    Login with One Time Password (OTP)
+    <span class="close-btn">&times;</span>
+  </div>
+
+  <div class="otp-body">
+
+    <p>
+      Enter the 4 digit One Time Password (OTP) sent to<br>
+      your mobile number
+    </p>
+
+    <div class="otp-title">Enter OTP</div>
+
+    <div class="otp-inputs">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+    </div>
+
+    <div class="resend">
+      Didn't receive OTP on mobile? <a href="#">Resend</a>
+    </div>
+
+    <div class="divider">
+      <span>OR</span>
+    </div>
+
+    <div class="alt-login">
+      <a href="http://127.0.0.1:5500/CSS/header.html">Sign In as Different User</a>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

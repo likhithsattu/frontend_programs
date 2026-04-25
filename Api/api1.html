@@ -8,87 +8,119 @@
 
     <style>
         #doctors{
-            display:flex;
+            display: grid;
             grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-            gap: 15px;
+            gap:15px
         }
+
         .card{
-            border: 2px solid black;
-            padding: 20px;
+            border:2px solid black;
+            padding:20px
         }
     </style>
 </head>
 <body>
-    <div id="doctors">
+     <div id="doctors">
 
-    </div>
-    <script>
-        onload=function(){
-            getDoctors();
-        }
-        function getDoctors(){
-            let b=fetch("https://doc-back.onrender.com/doctors",{
-                method:"GET"
-            })
-            .then((result)=>{
-                console.log(result)
-                return result.json();
-            })
-            .then((data)=>{
-                console.log(data);
-                showDoctors(data)
+     </div>
 
-            })
-        }
-        function showDoctors(data){
-            data.map((i)=>{
-                console.log(i.name,i.salary);
-                document.getElementById("doctors").innerHTML+=
-                `
-                <div class=card>
-                    <p>${i.name}</p>
-                    <p>${i.salary}</p>
-                    <p>${i.gender}</p>
-                    <p>${i.age}</p>
-                    <p>${i.specilization}</p>
-                    <button onclick="deleteDoctors(${i.id})">Delete</button>
-                    <button onclick="updateDoctors('${i.id}','${i.name}','${i.age}','${i.gender},'${i.specilization}')">Update</button>
-                    </div>
-                
-                `
-            })
+   <script>
+
+    onload=function(){
+        getDoctors();
+    }
+    function getDoctors(){
+     fetch("https://doc-back.onrender.com/doctors",{
+            method:"GET"
+        })
+        .then((result)=>{   //json text
+            console.log(result)
+            return result.json();  //json
+
+        })
+        .then((data)=>{
+            console.log(data);
+            showDoctors(data)
+
+        })
+
+    }
+
+    function showDoctors(data){
+
+        data.map((i)=>{
+            console.log(i.name,i.salary);
+            document.getElementById("doctors").innerHTML+=
+            `
+        <div class="card">
+            <p>${i.name}</p>
+            <p>${i.salary}</p>
+            <p>${i.gender}</p>
+            <p>${i.age}</p>
+            <p>${i.specialization}</p>
+        <button onclick="deleteDoctors(${i.id})">delete</button>
+        <button onclick="updateDoctors('${i.id}','${i.name}','${i.salary}','${i.age}','${i.gender}','${i.specialization}')">update</button>
+            
+            
+            
+        </div>
+            
+            
         
-        }
-        function deleteDoctors(id){
-            axios.delete(`https://doc-back.onrender.com/doctors/${id}`)
-            .then((res)=>{
-                console.log(res);
-                alert("delete successful");
-            })
-        
-        function updateDoctors(id,oldname,oldsalary,oldage,oldgender,oldspecilization){
-            let newname= prompt("enter new name",oldname)
-            let newsalary= prompt("enter new salary",oldsalary)
-            let newage= prompt("enter new age",oldage)
-            let newgender= prompt("enter new gender",oldgender)
-            let newspecilization= prompt("enter new specilization",oldspecilization)
+            `
+        })
 
-            axios.put(`https://doc-back.onrender.com/doctors/${id}`,{
-                name:newname,
-                salary:newsalary,
-                age:newage,
-                gender : newgender,
-                specilization:newspecilization
-            })
-            .then((result)=>{
-                alert("updates successful;ly");
-                getDoctors()
-            })
-            .catch((error)=>{
-                console.log(error)
-            })
-        }
-        }
-    </script>
+
+    }
+
+    function deleteDoctors(id){
+
+        axios.delete(`https://doc-back.onrender.com/doctors/${id}`)
+        .then((res)=>{
+            console.log(res);
+            if(res.status==200){
+            alert("deleted successfully")
+            getDoctors()
+            }
+
+            if(res.status==404){
+                alert("doctor not found")
+            }
+
+
+        })
+
+    }
+
+    function updateDoctors(id,oldname,oldsalary,oldage,oldgender,oldspecialization){
+
+        let newname= prompt("enter new name:",oldname)
+        let newsalary= prompt("enter new salary:",oldsalary)
+          let newage= prompt("enter new name:",oldage)
+        let newgender= prompt("enter new name:",oldgender)
+        let newspecialization= prompt("enter new name:",oldspecialization)
+
+
+        axios.put(`https://doc-back.onrender.com/doctors/${id}`,{
+            name: newname,
+            salary:newsalary,
+            age: newage,
+            gender: newgender,
+            specialization:newspecialization
+
+        })
+        .then((result)=>{
+            alert("updated successfullyyy");
+            getDoctors()
+        })
+        .catch((error)=>{
+            console.log(error)
+        })
+
+
+
+    }
+
+   </script>
 </body>
 </html>
